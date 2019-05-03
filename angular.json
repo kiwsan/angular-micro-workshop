@@ -46,9 +46,14 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/@fortawesome/fontawesome-free/css/all.css"
             ],
-            "scripts": [],
+            "scripts": [
+              "node_modules/jquery/dist/jquery.slim.js",
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.js"
+            ],
             "es5BrowserSupport": true
           },
           "configurations": {
@@ -147,6 +152,76 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "discovery": {
+      "root": "projects/discovery",
+      "sourceRoot": "projects/discovery/src",
+      "projectType": "library",
+      "prefix": "dcv",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/discovery/tsconfig.lib.json",
+            "project": "projects/discovery/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/discovery/src/test.ts",
+            "tsConfig": "projects/discovery/tsconfig.spec.json",
+            "karmaConfig": "projects/discovery/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/discovery/tsconfig.lib.json",
+              "projects/discovery/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "movies": {
+      "root": "projects/movies",
+      "sourceRoot": "projects/movies/src",
+      "projectType": "library",
+      "prefix": "mov",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/movies/tsconfig.lib.json",
+            "project": "projects/movies/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/movies/src/test.ts",
+            "tsConfig": "projects/movies/tsconfig.spec.json",
+            "karmaConfig": "projects/movies/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/movies/tsconfig.lib.json",
+              "projects/movies/tsconfig.spec.json"
+            ],
             "exclude": [
               "**/node_modules/**"
             ]
