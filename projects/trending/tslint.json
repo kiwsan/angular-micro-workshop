@@ -4,13 +4,13 @@
     "directive-selector": [
       true,
       "attribute",
-      "movies",
+      "trending",
       "camelCase"
     ],
     "component-selector": [
       true,
       "element",
-      "movies",
+      "trending",
       "kebab-case"
     ]
   }

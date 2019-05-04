@@ -159,33 +159,33 @@
         }
       }
     },
-    "discovery": {
-      "root": "projects/discovery",
-      "sourceRoot": "projects/discovery/src",
+    "discover": {
+      "root": "projects/discover",
+      "sourceRoot": "projects/discover/src",
       "projectType": "library",
-      "prefix": "dcv",
+      "prefix": "discover",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "projects/discovery/tsconfig.lib.json",
-            "project": "projects/discovery/ng-package.json"
+            "tsConfig": "projects/discover/tsconfig.lib.json",
+            "project": "projects/discover/ng-package.json"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/discovery/src/test.ts",
-            "tsConfig": "projects/discovery/tsconfig.spec.json",
-            "karmaConfig": "projects/discovery/karma.conf.js"
+            "main": "projects/discover/src/test.ts",
+            "tsConfig": "projects/discover/tsconfig.spec.json",
+            "karmaConfig": "projects/discover/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/discovery/tsconfig.lib.json",
-              "projects/discovery/tsconfig.spec.json"
+              "projects/discover/tsconfig.lib.json",
+              "projects/discover/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -198,7 +198,7 @@
       "root": "projects/movies",
       "sourceRoot": "projects/movies/src",
       "projectType": "library",
-      "prefix": "mov",
+      "prefix": "movies",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
@@ -221,6 +221,111 @@
             "tsConfig": [
               "projects/movies/tsconfig.lib.json",
               "projects/movies/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "trending": {
+      "root": "projects/trending",
+      "sourceRoot": "projects/trending/src",
+      "projectType": "library",
+      "prefix": "trending",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/trending/tsconfig.lib.json",
+            "project": "projects/trending/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/trending/src/test.ts",
+            "tsConfig": "projects/trending/tsconfig.spec.json",
+            "karmaConfig": "projects/trending/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/trending/tsconfig.lib.json",
+              "projects/trending/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "reviews": {
+      "root": "projects/reviews",
+      "sourceRoot": "projects/reviews/src",
+      "projectType": "library",
+      "prefix": "reviews",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/reviews/tsconfig.lib.json",
+            "project": "projects/reviews/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/reviews/src/test.ts",
+            "tsConfig": "projects/reviews/tsconfig.spec.json",
+            "karmaConfig": "projects/reviews/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/reviews/tsconfig.lib.json",
+              "projects/reviews/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "search": {
+      "root": "projects/search",
+      "sourceRoot": "projects/search/src",
+      "projectType": "library",
+      "prefix": "search",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/search/tsconfig.lib.json",
+            "project": "projects/search/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/search/src/test.ts",
+            "tsConfig": "projects/search/tsconfig.spec.json",
+            "karmaConfig": "projects/search/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/search/tsconfig.lib.json",
+              "projects/search/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"

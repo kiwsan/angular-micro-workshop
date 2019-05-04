@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'movies-movies',
+  selector: 'search-search',
   template: `
     <p>
-      movies works!
+      search works!
     </p>
   `,
   styles: []
 })
-export class MoviesComponent implements OnInit {
+export class SearchComponent implements OnInit {
 
   constructor() { }
 
