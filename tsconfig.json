@@ -82,6 +82,18 @@
       ],
       "search/*": [
         "dist/search/*"
+      ],
+      "shared": [
+        "dist/shared"
+      ],
+      "shared/*": [
+        "dist/shared/*"
+      ],
+      "auth": [
+        "dist/auth"
+      ],
+      "auth/*": [
+        "dist/auth/*"
       ]
     }
   }
