@@ -25,10 +25,10 @@ export class ConfigService {
         })
       };
 
-      this.httpClient.get<{ env: string }>('/config/env.json').subscribe(env => {
+      this.httpClient.get<{ env: string }>('/assets/config/env.json').subscribe(env => {
         this.env = env;
         this.httpClient
-          .get('/config/' + env.env + '.json')
+          .get('/assets/config/' + env.env + '.json')
           .pipe(
             catchError((err: HttpErrorResponse) => {
               return throwError(err.error || 'Server error');

@@ -13,6 +13,7 @@ import {ReviewsModule} from '../../projects/features-modules/reviews/src/lib/rev
 import {SearchModule} from '../../projects/features-modules/search/src/lib/search.module';
 import {TrendingModule} from '../../projects/features-modules/trending/src/lib/trending.module';
 import {ConfigService} from '../../projects/shared/src/lib/app-config.service';
+import {HttpClientModule} from '@angular/common/http';
 
 /**
  * Calling functions or calling new is not supported in metadata when using AoT.
@@ -38,11 +39,23 @@ export function configServiceFactory(config: ConfigService) {
     ReviewsModule,
     MoviesModule,
     DiscoverModule,
+    /** Angular core dependencies */
     BrowserModule,
+    HttpClientModule,
+    /** App custom dependencies */
     AppRoutingModule,
+    /** Third party modules */
     NgbModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    ConfigService,
+    {
+      provide: APP_INITIALIZER,
+      useFactory: configServiceFactory,
+      deps: [ConfigService],
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 
