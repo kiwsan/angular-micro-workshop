@@ -14,6 +14,8 @@ import {SearchModule} from '../../projects/features-modules/search/src/lib/searc
 import {TrendingModule} from '../../projects/features-modules/trending/src/lib/trending.module';
 import {ConfigService} from '../../projects/shared/src/lib/app-config.service';
 import {HttpClientModule} from '@angular/common/http';
+import {HttpServiceModule} from '../../projects/shared/src/lib/async-services/http';
+import {SimpleNotificationsModule} from 'angular2-notifications';
 
 /**
  * Calling functions or calling new is not supported in metadata when using AoT.
@@ -44,8 +46,11 @@ export function configServiceFactory(config: ConfigService) {
     HttpClientModule,
     /** App custom dependencies */
     AppRoutingModule,
+
+    HttpServiceModule.forRoot(),
     /** Third party modules */
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    SimpleNotificationsModule.forRoot()
   ],
   providers: [
     ConfigService,

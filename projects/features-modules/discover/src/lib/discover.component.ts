@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   template: `
     <p>
       discover works!
+      <router-outlet></router-outlet>
     </p>
   `,
   styles: []
