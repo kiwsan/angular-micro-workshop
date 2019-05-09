@@ -1,6 +1,6 @@
-import {TestBed} from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 
-import {TrendingService} from './trending.service';
+import { TrendingService } from './trending.service';
 
 describe('TrendingService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));

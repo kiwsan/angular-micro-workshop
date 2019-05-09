@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'trending-trending',
@@ -11,8 +11,7 @@ import {Component, OnInit} from '@angular/core';
 })
 export class TrendingComponent implements OnInit {
 
-  constructor() {
-  }
+  constructor() { }
 
   ngOnInit() {
   }

@@ -19,20 +19,6 @@
       "dom"
     ],
     "paths": {
-      "discovery": [
-        "dist/discovery",
-        "dist/discovery",
-        "dist/discovery",
-        "dist/discovery",
-        "dist/discovery"
-      ],
-      "discovery/*": [
-        "dist/discovery/*",
-        "dist/discovery/*",
-        "dist/discovery/*",
-        "dist/discovery/*",
-        "dist/discovery/*"
-      ],
       "movies": [
         "dist/movies",
         "dist/movies"
@@ -41,47 +27,19 @@
         "dist/movies/*",
         "dist/movies/*"
       ],
-      "tv-shows": [
-        "dist/tv-shows"
-      ],
-      "tv-shows/*": [
-        "dist/tv-shows/*"
-      ],
-      "people": [
-        "dist/people"
-      ],
-      "people/*": [
-        "dist/people/*"
-      ],
-      "movie": [
-        "dist/movie"
-      ],
-      "movie/*": [
-        "dist/movie/*"
-      ],
       "discover": [
         "dist/discover"
       ],
       "discover/*": [
         "dist/discover/*"
       ],
-      "trending": [
-        "dist/trending"
-      ],
-      "trending/*": [
-        "dist/trending/*"
-      ],
       "reviews": [
+        "dist/reviews",
         "dist/reviews"
       ],
       "reviews/*": [
+        "dist/reviews/*",
         "dist/reviews/*"
-      ],
-      "search": [
-        "dist/search"
-      ],
-      "search/*": [
-        "dist/search/*"
       ],
       "shared": [
         "dist/shared"
@@ -94,6 +52,18 @@
       ],
       "auth/*": [
         "dist/auth/*"
+      ],
+      "search": [
+        "dist/search"
+      ],
+      "search/*": [
+        "dist/search/*"
+      ],
+      "trending": [
+        "dist/trending"
+      ],
+      "trending/*": [
+        "dist/trending/*"
       ]
     }
   }
