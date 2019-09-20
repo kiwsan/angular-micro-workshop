@@ -1,7 +1,6 @@
 import {Injectable} from '@angular/core';
 import {ApiService, HttpResponseHandler} from '../../../../shared/src/lib/async-services/http';
 import {HttpClient} from '@angular/common/http';
-import {UtilityConstants} from '../../../../shared/src/lib/utilitys/utilityConstants';
 import {catchError} from 'rxjs/operators';
 
 @Injectable()
@@ -14,7 +13,6 @@ export class DiscoverApiClientService extends ApiService {
     return this.httpClient
       .get(this.url + '/movie', {
         params: {
-          api_key: UtilityConstants.ApiKey,
           language: 'en-US',
           sort_by: 'popularity.desc',
           include_adult: 'false',
@@ -29,7 +27,6 @@ export class DiscoverApiClientService extends ApiService {
     return this.httpClient
       .get(this.url + 'tv', {
         params: {
-          api_key: UtilityConstants.ApiKey,
           language: 'en-US',
           sort_by: 'popularity.desc',
           page: '1',

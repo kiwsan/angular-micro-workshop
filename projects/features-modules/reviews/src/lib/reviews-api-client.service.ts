@@ -1,7 +1,6 @@
 import {Injectable} from '@angular/core';
 import {ApiService, HttpResponseHandler} from '../../../../shared/src/lib/async-services/http';
 import {HttpClient} from '@angular/common/http';
-import {UtilityConstants} from '../../../../shared/src/lib/utilitys/utilityConstants';
 import {catchError} from 'rxjs/operators';
 
 @Injectable()
@@ -12,11 +11,7 @@ export class ReviewsApiClientService extends ApiService {
 
   public getDetail(id: string) {
     return this.httpClient
-      .get(`${this.url}/${id}`, {
-        params: {
-          api_key: UtilityConstants.ApiKey,
-        }
-      })
+      .get(`${this.url}/${id}`, {})
       .pipe(catchError((err, source) => this.responseHandler.onCatch(err, source)));
   }
 }

@@ -1,7 +1,6 @@
 import {Injectable} from '@angular/core';
 import {ApiService, HttpResponseHandler} from '../../../../shared/src/lib/async-services/http';
 import {HttpClient} from '@angular/common/http';
-import {UtilityConstants} from '../../../../shared/src/lib/utilitys/utilityConstants';
 import {catchError} from 'rxjs/operators';
 
 @Injectable()
@@ -14,7 +13,6 @@ export class MoviesApiClientService extends ApiService {
     return this.httpClient
       .get(`${this.url}/${id}`, {
         params: {
-          api_key: UtilityConstants.ApiKey,
           language: 'en-US',
         }
       })
@@ -25,7 +23,6 @@ export class MoviesApiClientService extends ApiService {
     return this.httpClient
       .get(`${this.url}/${id}/alternative_titles`, {
         params: {
-          api_key: UtilityConstants.ApiKey,
           country: '',
         }
       })
@@ -34,31 +31,19 @@ export class MoviesApiClientService extends ApiService {
 
   public getCredits(id: number) {
     return this.httpClient
-      .get(`${this.url}/${id}/credits`, {
-        params: {
-          api_key: UtilityConstants.ApiKey,
-        }
-      })
+      .get(`${this.url}/${id}/credits`, {})
       .pipe(catchError((err, source) => this.responseHandler.onCatch(err, source)));
   }
 
   public getExternalIDs(id: number) {
     return this.httpClient
-      .get(`${this.url}/${id}/external_ids`, {
-        params: {
-          api_key: UtilityConstants.ApiKey,
-        }
-      })
+      .get(`${this.url}/${id}/external_ids`, {})
       .pipe(catchError((err, source) => this.responseHandler.onCatch(err, source)));
   }
 
   public getReleaseDates(id: number) {
     return this.httpClient
-      .get(`${this.url}/${id}/release_dates`, {
-        params: {
-          api_key: UtilityConstants.ApiKey,
-        }
-      })
+      .get(`${this.url}/${id}/release_dates`, {})
       .pipe(catchError((err, source) => this.responseHandler.onCatch(err, source)));
   }
 
@@ -66,7 +51,6 @@ export class MoviesApiClientService extends ApiService {
     return this.httpClient
       .get(`${this.url}/${id}/videos`, {
         params: {
-          api_key: UtilityConstants.ApiKey,
           language: 'en-US',
         }
       })
@@ -77,7 +61,6 @@ export class MoviesApiClientService extends ApiService {
     return this.httpClient
       .get(`${this.url}/${id}/recommendations`, {
         params: {
-          api_key: UtilityConstants.ApiKey,
           language: 'en-US',
           page: '1'
         }
@@ -89,7 +72,6 @@ export class MoviesApiClientService extends ApiService {
     return this.httpClient
       .get(`${this.url}/now_playing`, {
         params: {
-          api_key: UtilityConstants.ApiKey,
           language: 'en-US',
           page: '1'
         }
@@ -101,7 +83,6 @@ export class MoviesApiClientService extends ApiService {
     return this.httpClient
       .get(`${this.url}/popular`, {
         params: {
-          api_key: UtilityConstants.ApiKey,
           language: 'en-US',
           page: '1'
         }
@@ -113,7 +94,6 @@ export class MoviesApiClientService extends ApiService {
     return this.httpClient
       .get(`${this.url}/top_rated`, {
         params: {
-          api_key: UtilityConstants.ApiKey,
           language: 'en-US',
           page: '1'
         }
@@ -125,7 +105,6 @@ export class MoviesApiClientService extends ApiService {
     return this.httpClient
       .get(`${this.url}/upcoming`, {
         params: {
-          api_key: UtilityConstants.ApiKey,
           language: 'en-US',
           page: '1'
         }
