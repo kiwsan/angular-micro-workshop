@@ -5,8 +5,6 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 
-import {HomeComponent} from './home/home.component';
-import {AboutComponent} from './about/about.component';
 import {DiscoverModule} from '../../projects/features-modules/discover/src/lib/discover.module';
 import {MoviesModule} from '../../projects/features-modules/movies/src/lib/movies.module';
 import {ReviewsModule} from '../../projects/features-modules/reviews/src/lib/reviews.module';
@@ -16,6 +14,8 @@ import {ConfigService} from '../../projects/shared/src/lib/app-config.service';
 import {HttpClientModule} from '@angular/common/http';
 import {HttpServiceModule} from '../../projects/shared/src/lib/async-services/http';
 import {SimpleNotificationsModule} from 'angular2-notifications';
+import {SharedModule} from '../../projects/shared/src/lib/shared.module';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 /**
  * Calling functions or calling new is not supported in metadata when using AoT.
@@ -31,9 +31,7 @@ export function configServiceFactory(config: ConfigService) {
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HomeComponent,
-    AboutComponent
+    AppComponent
   ],
   imports: [
     TrendingModule,
@@ -46,11 +44,12 @@ export function configServiceFactory(config: ConfigService) {
     HttpClientModule,
     /** App custom dependencies */
     AppRoutingModule,
-
+    SharedModule,
     HttpServiceModule.forRoot(),
     /** Third party modules */
     NgbModule.forRoot(),
-    SimpleNotificationsModule.forRoot()
+    SimpleNotificationsModule.forRoot(),
+    BrowserAnimationsModule
   ],
   providers: [
     ConfigService,
