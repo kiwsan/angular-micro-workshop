@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-now-playing',
+  selector: 'home-now-playing',
   templateUrl: './now-playing.component.html',
   styles: []
 })

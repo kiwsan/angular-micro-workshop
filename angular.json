@@ -411,7 +411,7 @@
       "root": "projects/home",
       "sourceRoot": "projects/home/src",
       "projectType": "library",
-      "prefix": "lib",
+      "prefix": "home",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",

@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-featured-lists',
+  selector: 'home-featured-lists',
   templateUrl: './featured-lists.component.html',
   styles: []
 })

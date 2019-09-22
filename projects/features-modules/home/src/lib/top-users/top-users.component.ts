@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-top-users',
+  selector: 'home-top-users',
   templateUrl: './top-users.component.html',
   styles: []
 })

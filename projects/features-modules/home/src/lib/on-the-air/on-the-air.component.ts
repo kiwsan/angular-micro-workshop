@@ -1,9 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-on-the-air',
+  selector: 'home-on-the-air',
   templateUrl: './on-the-air.component.html',
-  styles: []
+  styleUrls: ['./on-the-air.component.css']
 })
 export class OnTheAirComponent implements OnInit {
 

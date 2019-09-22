@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'lib-home',
+  selector: 'home-home',
   template: `
       <p>
           home works!
