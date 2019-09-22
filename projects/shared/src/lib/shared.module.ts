@@ -5,9 +5,10 @@ import {LayoutComponent} from './containers/layout/layout.component';
 import {FooterComponent} from './components/footer/footer.component';
 import {AngularMaterialModule} from './themes/angular-material.module';
 import {RouterModule} from '@angular/router';
+import {SearchComponent} from './components/search/search.component';
 
 @NgModule({
-  declarations: [SharedComponent, LayoutComponent, HeaderComponent, FooterComponent],
+  declarations: [SharedComponent, LayoutComponent, HeaderComponent, FooterComponent, SearchComponent],
   imports: [
     AngularMaterialModule,
     RouterModule

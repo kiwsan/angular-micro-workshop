@@ -64,6 +64,12 @@
       ],
       "trending/*": [
         "dist/trending/*"
+      ],
+      "home": [
+        "dist/home"
+      ],
+      "home/*": [
+        "dist/home/*"
       ]
     }
   }
