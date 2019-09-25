@@ -16,6 +16,7 @@ import {HttpServiceModule} from '../../projects/shared/src/lib/async-services/ht
 import {SimpleNotificationsModule} from 'angular2-notifications';
 import {SharedModule} from '../../projects/shared/src/lib/shared.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {HomeModule} from '../../projects/features-modules/home/src/lib/home.module';
 
 /**
  * Calling functions or calling new is not supported in metadata when using AoT.
@@ -34,6 +35,7 @@ export function configServiceFactory(config: ConfigService) {
     AppComponent
   ],
   imports: [
+    HomeModule,
     TrendingModule,
     SearchModule,
     ReviewsModule,

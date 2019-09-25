@@ -3,7 +3,7 @@ import {DiscoverComponent} from './discover.component';
 import {HomeComponent} from './home/home.component';
 import {DiscoverRoutingModule} from './discover-routing.module';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import {DiscoverApiClientService} from './discover-api-client.service';
+import {DiscoverService} from './discover.service';
 
 @NgModule({
   declarations: [DiscoverComponent, HomeComponent],
@@ -12,7 +12,7 @@ import {DiscoverApiClientService} from './discover-api-client.service';
     NgbModule.forRoot()
   ],
   exports: [DiscoverComponent],
-  providers: [DiscoverApiClientService]
+  providers: [DiscoverService]
 })
 
 export class DiscoverModule {
