@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'movies-movies',
+  selector: "movies-movies",
   template: `
     <p>
       movies works!
@@ -10,10 +10,7 @@ import { Component, OnInit } from '@angular/core';
   styles: []
 })
 export class MoviesComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

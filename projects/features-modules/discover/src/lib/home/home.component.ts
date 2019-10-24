@@ -1,19 +1,18 @@
-import {Component, OnInit} from '@angular/core';
-import {Movie, Tv} from '../discover.models';
-import {Page} from '../../../../../shared/src/lib/pagination/pagination-page';
-import {DiscoverService} from '../discover.service';
+import { Component, OnInit } from "@angular/core";
+import { Movie, Tv } from "../discover.models";
+import { Page } from "../../../../../shared/src/lib/pagination/pagination-page";
+import { DiscoverService } from "../discover.service";
 
 @Component({
-  selector: 'discover-home',
-  templateUrl: './home.component.html',
+  selector: "discover-home",
+  templateUrl: "./home.component.html",
   styles: []
 })
 export class HomeComponent implements OnInit {
   public movie: Page<Movie> = null;
   public tv: Page<Tv> = null;
 
-  constructor(private apiClient: DiscoverService) {
-  }
+  constructor(private apiClient: DiscoverService) {}
 
   ngOnInit() {
     this.getMovies();

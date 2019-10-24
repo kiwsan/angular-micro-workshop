@@ -129,7 +129,6 @@ export interface ReleaseDatesEntity {
   note?: string | null;
 }
 
-
 // External Ids
 export interface ExternalId {
   id: number;

@@ -2,26 +2,24 @@
 
 Work in progress.
 
-## CLI Overview and Command Reference
-
-### Installing Angular CLI
+## Quick start
 
 Install the CLI using the npm package manager:
 
 ```bash
-$ npm install -g @angular/cli
+$npm install -g @angular/cli
 ```
 
 To build, and serve a new, basic Angular project on a development server use the following commands:
 
 ```bash
-$ ng serve
+$ng serve
 ```
 
 In your browser, open
 
 ```bash
-$ curl http://localhost:4200/
+$curl http://localhost:4200/
 ```
 
 ## References

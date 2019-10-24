@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'discover-discover',
+  selector: "discover-discover",
   template: `
     <p>
       discover works!
@@ -11,10 +11,7 @@ import { Component, OnInit } from '@angular/core';
   styles: []
 })
 export class DiscoverComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
