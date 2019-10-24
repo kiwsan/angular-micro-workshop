@@ -1,22 +1,22 @@
-import {BrowserModule} from '@angular/platform-browser';
-import {APP_INITIALIZER, NgModule} from '@angular/core';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { BrowserModule } from "@angular/platform-browser";
+import { APP_INITIALIZER, NgModule } from "@angular/core";
+import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
-import {AppRoutingModule} from './app-routing.module';
-import {AppComponent} from './app.component';
+import { AppRoutingModule } from "./app-routing.module";
+import { AppComponent } from "./app.component";
 
-import {DiscoverModule} from '../../projects/features-modules/discover/src/lib/discover.module';
-import {MoviesModule} from '../../projects/features-modules/movies/src/lib/movies.module';
-import {ReviewsModule} from '../../projects/features-modules/reviews/src/lib/reviews.module';
-import {SearchModule} from '../../projects/features-modules/search/src/lib/search.module';
-import {TrendingModule} from '../../projects/features-modules/trending/src/lib/trending.module';
-import {ConfigService} from '../../projects/shared/src/lib/app-config.service';
-import {HttpClientModule} from '@angular/common/http';
-import {HttpServiceModule} from '../../projects/shared/src/lib/async-services/http';
-import {SimpleNotificationsModule} from 'angular2-notifications';
-import {SharedModule} from '../../projects/shared/src/lib/shared.module';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {HomeModule} from '../../projects/features-modules/home/src/lib/home.module';
+import { DiscoverModule } from "../../projects/features-modules/discover/src/lib/discover.module";
+import { MoviesModule } from "../../projects/features-modules/movies/src/lib/movies.module";
+import { ReviewsModule } from "../../projects/features-modules/reviews/src/lib/reviews.module";
+import { SearchModule } from "../../projects/features-modules/search/src/lib/search.module";
+import { TrendingModule } from "../../projects/features-modules/trending/src/lib/trending.module";
+import { ConfigService } from "../../projects/shared/src/lib/app-config.service";
+import { HttpClientModule } from "@angular/common/http";
+import { HttpServiceModule } from "../../projects/shared/src/lib/async-services/http";
+import { SimpleNotificationsModule } from "angular2-notifications";
+import { SharedModule } from "../../projects/shared/src/lib/shared.module";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { HomeModule } from "../../projects/features-modules/home/src/lib/home.module";
 
 /**
  * Calling functions or calling new is not supported in metadata when using AoT.
@@ -31,9 +31,7 @@ export function configServiceFactory(config: ConfigService) {
 }
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     HomeModule,
     TrendingModule,
@@ -64,6 +62,4 @@ export function configServiceFactory(config: ConfigService) {
   ],
   bootstrap: [AppComponent]
 })
-
-export class AppModule {
-}
+export class AppModule {}
