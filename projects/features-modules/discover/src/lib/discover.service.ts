@@ -11,7 +11,7 @@ import { catchError } from "rxjs/operators";
 })
 export class DiscoverService extends ApiService {
   constructor(httpClient: HttpClient, responseHandler: HttpResponseHandler) {
-    super("/api/3/discover", httpClient, responseHandler);
+    super("/3/discover", httpClient, responseHandler);
   }
 
   public getMovies() {

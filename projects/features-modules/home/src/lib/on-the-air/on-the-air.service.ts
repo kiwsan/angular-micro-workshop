@@ -8,7 +8,7 @@ import {catchError} from 'rxjs/operators';
 })
 export class OnTheAirService extends ApiService {
   constructor(httpClient: HttpClient, responseHandler: HttpResponseHandler) {
-    super('/api/3/tv/', httpClient, responseHandler);
+    super('/3/tv/', httpClient, responseHandler);
   }
 
   public getOnTheAirs() {

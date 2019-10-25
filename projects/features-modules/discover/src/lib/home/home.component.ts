@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
   constructor(private apiClient: DiscoverService) {}
 
   ngOnInit() {
-    this.getMovies();
+
   }
 
   public getMovies() {
